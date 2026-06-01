@@ -275,22 +275,27 @@ header{
 }
 .second_page {
     width: 100%;
-    max-width: 920px;
+    max-width: 1440px;
     margin: 120px auto 0 auto; 
-    padding: 0;
+    padding: 0; 
     position: relative;
+}
+.second-content {
+    width: 100%;
+    max-width: 920px; 
+    margin: 0 auto; 
 }
 .Star2 {
     position: absolute;
-    left: -40px; 
-    top: -30px;  
+    left: 135px; 
+    top: -37px;  
     width: 126px; 
     height: 126px;
-    z-index: -1; 
+    z-index: 1;  
 }
 .Squiggle {
     position: absolute;
-    right: -200px; 
+    right: 40px; 
     top: -60px;
     width: 184px;
     height: 184px;
