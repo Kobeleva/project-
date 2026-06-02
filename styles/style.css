@@ -97,6 +97,13 @@ header{
     cursor: pointer;
     gap: 12px;
     padding: 0 20px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+.started:hover {
+    background-color: rgb(38, 92, 85);
+}
+.started:active {
+    transform: scale(0.97); 
 }
 .started p {
     text-align: left; 
@@ -222,7 +229,6 @@ header{
 }
 .started-more {
     display: flex;
-
     justify-content: flex-start;
     align-items: center; 
     background: none; 
@@ -235,12 +241,22 @@ header{
     margin-top: 15px; 
     gap: 8px; 
     padding: 0; 
+    transition: opacity 0.3s ease;
+}
+.started-more:hover {
+    opacity: 0.6;
+}
+.started-more:active {
+    opacity: 0.6;
 }
 .started-more img {
     display: block;
     width: 12px;
     height: 12px;
     filter: sepia(0.3) saturate(0.5) hue-rotate(10deg) brightness(0.92);
+}
+.started-more:hover img {
+    transform: translateX(5px); 
 }
 .started-more p {
     margin: 0;
@@ -378,12 +394,23 @@ header{
     cursor: pointer;
     margin-top: 25px; 
     padding: 0;
+    transition: color 0.3s ease;
 }
 .card-btn img {
     width: 12px;
     height: 12px;
     margin-left: 10px; 
     filter: brightness(0); 
+    transition: transform 0.3s ease;
+}
+card-btn:hover {
+    color: rgb(27, 73, 67);
+}
+.card-btn:hover img {
+    transform: translateX(5px); 
+}
+.card-btn:active {
+    opacity: 0.7;
 }
 
 /*третья*/
@@ -426,6 +453,7 @@ header{
     height: 648px;
     position: relative;
     overflow: hidden; /*чтобы края картинки не вылезали если будут больше рамки*/
+    
 }
 .photo, .shampoo, .pipette, .cream {
     width: 100%;
@@ -438,8 +466,15 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgb(105, 92, 68) 0%, rgba(0, 0, 0, 0) 50%);
+    height: 130%;
+    background: linear-gradient(to top, rgb(77, 65, 43) 0%, rgba(0, 0, 0, 0) 60%);
+    opacity: 0.85; 
+    transform: translateY(0); 
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+.picture1:hover .gradient-overlay {
+    opacity: 1;
+    transform: translateY(-40px); 
 }
 .star1{
     position: absolute;
@@ -495,6 +530,13 @@ header{
     height: 12px;
     filter: none;
     filter: sepia(1) saturate(2) hue-rotate(10deg) brightness(0.9);
+}
+.picture1 .started img {
+    transition: transform 0.3s ease;
+}
+.picture1:hover .started img,
+.picture1 .started:hover img {
+    transform: translateX(6px);
 }
 
 /*четвёртая*/
@@ -697,6 +739,14 @@ header{
     margin-left: 10px; 
     filter: brightness(0); 
 }
+.card1 .started img {
+    transition: transform 0.3s ease;
+}
+
+.card1:hover .started img, .card1 .started:hover img {
+    transform: translateX(6px);
+}
+
 
 /*шестая*/
 
@@ -798,6 +848,19 @@ header{
     align-items: center;  
     justify-content: center;
     border-radius: 4px; 
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+.arrow1:hover, .arrow3:hover {
+    background-color: rgb(230, 232, 232); /* Чуть более глубокий серый при наведении */
+}
+
+.arrow1:focus, .arrow3:focus {
+    outline: 2px solid rgb(16, 34, 38);
+    border-radius: 4px;
+}
+/* При клике стрелочки визуально утапливаются */
+.arrow1:active, .arrow3:active {
+    transform: scale(0.92);
 }
 .arrow-img-left {
     width: auto;
@@ -911,6 +974,21 @@ header{
     width: 12px;
     height: 12px;
     filter: none; 
+}
+.page_seven .started {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page_seven .started img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.page_seven .started:hover {
+    background-color: rgb(239, 237, 231);
+    color: rgb(28, 63, 58);
+}
+.page_seven .started:hover img {
+    transform: translateX(6px);
+    filter: brightness(0) saturate(100%) invert(19%) sepia(32%) saturate(830%) hue-rotate(124deg) brightness(93%) contrast(91%); /* Красит белую стрелку в точный темно-зеленый цвет макета */
 }
 
 /*восьмая*/
@@ -1049,6 +1127,26 @@ header{
     margin-left: 8px; 
     filter: brightness(0); 
 }
+.title .started {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.title .started img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.title .started:hover {
+    background-color: rgb(16, 34, 38);
+    color: rgb(255, 255, 255);
+}
+.title .started:hover img {
+    transform: translateX(6px);
+    filter: brightness(1); 
+}
+.card2 .started img {
+    transition: transform 0.3s ease;
+}
+.card2:hover .started img, .card2 .started:hover img {
+    transform: translateX(6px);
+}
 
 /*подвал!*/
 
@@ -1101,6 +1199,8 @@ footer {
     color: rgb(28, 63, 58);
     font-size: 0.875rem;
     text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .footer-bottom-bg {
     width: 100%;
@@ -1132,14 +1232,30 @@ footer {
     color: rgb(28, 63, 58);
     font-size: 0.8125rem; 
     text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
+.footer-links-row a:hover, .footer-bottom-links a:hover {
+    color: rgb(16, 34, 38); /* Цвет становится темнее и контрастнее */
+    text-decoration: underline; /* Появляется аккуратное подчеркивание */
+}
+
+.footer-links-row a:focus, .footer-bottom-links a:focus {
+    outline: 1px solid rgb(28, 63, 58);
+    outline-offset: 2px;
+}
+
+.footer-links-row a:active, .footer-bottom-links a:active {
+    opacity: 0.6;
+}
+
 
 
 @media (max-width: 430px) {
     header {
         flex-direction: column;
         align-items: center;
-        padding: 20px 15px; /*Уменьшаем внутренние отступы для телефона */
+        padding: 20px 15px; 
     }
     .hat {
         margin-right: 0; 
@@ -1153,7 +1269,7 @@ footer {
         margin-bottom: 30px;
     }
     .Elevate {
-        font-size: 36px; 
+        font-size: 34px;
         width: 100%;
     }
     .heart-text {
@@ -1181,21 +1297,21 @@ footer {
         position: absolute; 
         top: -25px; 
         right: 10px; 
-        width: 150px; 
+        width: 135px;
         height: auto;
         box-sizing: border-box;
-        padding: 20px 15px; 
+        padding: 15px 12px; 
         margin-top: 0; 
     }
     .sun-in-header {
         position: absolute;
-        width: 110px; 
+        width: 90px; 
         height: auto;
         bottom: 0;          
         left: auto;
         right: 0;
         z-index: 1;
-        opacity: 0.25;      
+        opacity: 0.20;      
     }
     .green-content {
         position: relative; 
@@ -1208,9 +1324,9 @@ footer {
         align-items: flex-start; 
     }
     .white_text {
-        font-size: 14px;
+        font-size: 13px;
         width: 100%;        
-        max-width: 120px;   
+        max-width: 110px;   
         line-height: 1.3;
     }
     .started-more {
@@ -1248,11 +1364,11 @@ footer {
         gap: 20px;
     }
     .icons1 {
-        padding: 30px 20px;
+        padding: 25px 15px; 
     }
     .Star2 {
-        left: 20px;
-        top: -26px;
+        left: 40px;
+        top: -30px;
         width: 80px;
         height: 80px;
     }
@@ -1273,7 +1389,7 @@ footer {
         box-sizing: border-box;
     }
     .Star4 {
-        left: -20px;
+        left: 2px;
         top: -30px;
         width: 90px;
         height: 90px;
@@ -1287,7 +1403,7 @@ footer {
     }
     .picture {
         width: 100%;
-        grid-template-columns: 1fr; /* Перестраиваем кейсы в одну колонку */
+        grid-template-columns: 1fr; 
         gap: 25px;
     }
     .picture1 {
@@ -1296,8 +1412,8 @@ footer {
     }
     .text {
         bottom: 30px;
-        left: 25px;
-        max-width: calc(100% - 50px); 
+        left: 20px;
+        max-width: calc(100% - 40px); 
     }
     .subtitle1 {
         font-size: 22px;
@@ -1325,7 +1441,6 @@ footer {
     .skills {
         width: 100%;
     }
-
     .card {
         width: 100%;
         padding: 20px 0; 
@@ -1337,7 +1452,7 @@ footer {
         font-size: 13px;
     }
     .Star5 {
-        left: -10px;
+        left: -20px;
         top: -8px;
         width: 90px;
         height: 90px;
@@ -1350,7 +1465,6 @@ footer {
         padding: 40px 15px;
         box-sizing: border-box;
     }
-
     .five {
         font-size: 28px;
         margin-bottom: 40px;
@@ -1366,16 +1480,16 @@ footer {
     .card1 {
         max-width: 100%;
         width: 100%;
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
     .card1::before {
-        left: 20px;
-        right: 20px;
+        left: 15px;
+        right: 15px;
         top: 90px;
     }
     .card1::after {
-        left: 20px;
-        right: 20px;
+        left: 15px;
+        right: 15px;
         bottom: 80px;
     }
     .cup {
@@ -1419,6 +1533,7 @@ footer {
     .man {
         width: 100%; 
         height: 320px;
+        object-fit: cover; 
     }
     .quote {
         width: 100%;
@@ -1432,7 +1547,7 @@ footer {
     .quote1 {
         width: 100%;
         height: auto;
-        font-size: 18px;
+        font-size: 17px; /* Чуть изящнее для Pixel 7 */
         line-height: 1.5;
     }
     .inf {
@@ -1442,8 +1557,8 @@ footer {
         margin-top: 10px;
     }
     .Star7 {
-        left: 30px;
-        top: -7px;
+        left: 45px;
+        top: -10px;
         width: 80px;
         height: 80px;
     }
@@ -1519,11 +1634,13 @@ footer {
         line-height: 1.4;
     }
     .Star9 {
-        left: 65px;
+        left: 80px;
         top: -2px;
         width: 80px;
         height: 80px;
     }
+
+    /* --- ФУТЕР --- */
     footer {
         padding-top: 3.75rem;
     }
