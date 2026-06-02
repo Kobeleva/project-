@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButtons = document.querySelectorAll('.started');
     const modalForm = document.querySelector('.modal-form');
 
+    
     if (!modalOverlay || !closeButton) return;
 
     const openModal = (event) => {
