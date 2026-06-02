@@ -1057,11 +1057,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 7.5rem;
 }
 .footer-container {
-    width: 1060px; 
-    padding: 0 20px; 
+    width: 100%;
+    max-width: 66.25rem; 
+    padding: 0 1.25rem;
     box-sizing: border-box;
 }
 .footer-top {
@@ -1069,7 +1070,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
 }
 .footer-brand {
     display: flex;
@@ -1077,28 +1078,28 @@ footer {
     align-items: center;
 }
 .footer-logo-img {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem; 
+    height: 2.5rem;
     display: block;
 }
 .footer-name {
     font-family: 'Roboto1', Arial, sans-serif;
     font-weight: 400;
     color: rgb(51, 51, 51);
-    font-size: 24px; 
-    margin-left: 12px;
+    font-size: 1.5rem; 
+    margin-left: 0.75rem;
     display: block;
 }
 .footer-links-row {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 1.875rem;
 }
 .footer-links-row a {
     font-family: 'Roboto1', Arial, sans-serif;
     font-weight: 400;
     color: rgb(28, 63, 58);
-    font-size: 14px; 
+    font-size: 0.875rem;
     text-decoration: none;
 }
 .footer-bottom-bg {
@@ -1112,23 +1113,443 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0; 
+    padding: 1.875rem 0;; 
 }
 .copyright{
     font-family: 'Inter', Arial, sans-serif;
     font-weight: 400;
     color: rgb(16, 34, 38);
-    font-size: 13px; 
+    font-size: 0.8125rem; 
 }
 .footer-bottom-links {
     display: flex;
     flex-direction: row;
-    gap: 40px; 
+    gap: 2.5rem 
 }
 .footer-bottom-links a {
     font-family: 'Roboto1', Arial, sans-serif;
     font-weight: 400;
     color: rgb(28, 63, 58);
-    font-size: 13px; 
+    font-size: 0.8125rem; 
     text-decoration: none;
+}
+
+
+@media (max-width: 430px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px; /*Уменьшаем внутренние отступы для телефона */
+    }
+    .hat {
+        margin-right: 0; 
+        margin-bottom: 40px; 
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .logo {
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    .Elevate {
+        font-size: 36px; 
+        width: 100%;
+    }
+    .heart-text {
+        margin-top: 40px; 
+    }
+    .block-foto {
+        margin-left: 0; 
+        width: 100%; 
+        max-width: 345px;
+        height: auto;
+    }
+    .foto {
+        width: 100%;
+        height: auto; 
+    }
+    .white-block {
+        left: 10px; 
+        bottom: 20px;
+        padding: 10px 15px;
+    }
+    .number {
+        font-size: 22px;
+    }
+    .green-block {
+        position: absolute; 
+        top: -25px; 
+        right: 10px; 
+        width: 150px; 
+        height: auto;
+        box-sizing: border-box;
+        padding: 20px 15px; 
+        margin-top: 0; 
+    }
+    .sun-in-header {
+        position: absolute;
+        width: 110px; 
+        height: auto;
+        bottom: 0;          
+        left: auto;
+        right: 0;
+        z-index: 1;
+        opacity: 0.25;      
+    }
+    .green-content {
+        position: relative; 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+    .white_text {
+        font-size: 14px;
+        width: 100%;        
+        max-width: 120px;   
+        line-height: 1.3;
+    }
+    .started-more {
+        margin-top: 12px; 
+        font-size: 11px;
+    }
+    .sponsors {
+        width: 100%;
+        max-width: 345px;
+        flex-direction: column;
+        gap: 30px; 
+        margin: 0 auto;
+    }
+    .sponsor {
+        max-width: 120px;
+        height: auto;
+    }
+    .second_page {
+        margin: 60px auto 0 auto; 
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .second-content {
+        max-width: 100%; 
+    }
+    .two {
+        width: 100%; 
+        font-size: 28px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .icons {
+        width: 100%;
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .icons1 {
+        padding: 30px 20px;
+    }
+    .Star2 {
+        left: 20px;
+        top: -26px;
+        width: 80px;
+        height: 80px;
+    }
+    .Squiggle {
+        right: 10px;
+        top: -95px;
+        width: 100px;
+        height: 100px;
+    }
+    .Star3 {
+        display: none;
+    }
+    .third_page {
+        width: 100%;
+        min-height: auto;
+        margin: 80px auto 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .Star4 {
+        left: -20px;
+        top: -30px;
+        width: 90px;
+        height: 90px;
+    }
+    .three {
+        width: 100%;
+        margin-left: 0;
+        font-size: 28px; 
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .picture {
+        width: 100%;
+        grid-template-columns: 1fr; /* Перестраиваем кейсы в одну колонку */
+        gap: 25px;
+    }
+    .picture1 {
+        width: 100%;
+        height: 420px;
+    }
+    .text {
+        bottom: 30px;
+        left: 25px;
+        max-width: calc(100% - 50px); 
+    }
+    .subtitle1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .picture1 .started {
+        margin-top: 30px; 
+    }
+    .fourth_page {
+        margin: 80px auto 0 auto;
+        min-height: auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .four {
+        width: 100%;
+        height: auto;
+    }
+    .fourH {
+        width: 100%;
+        font-size: 26px; 
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .skills {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px 0; 
+    }
+    .subtitle2 {
+        font-size: 18px;
+    }
+    .description2 {
+        font-size: 13px;
+    }
+    .Star5 {
+        left: -10px;
+        top: -8px;
+        width: 90px;
+        height: 90px;
+    }
+    .Squiggle1 {
+        display: none;
+    }
+    .fifth_page {
+        width: 100%;
+        padding: 40px 15px;
+        box-sizing: border-box;
+    }
+
+    .five {
+        font-size: 28px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .cards {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        width: 100%;
+        height: auto; 
+    }
+    .card1 {
+        max-width: 100%;
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .card1::before {
+        left: 20px;
+        right: 20px;
+        top: 90px;
+    }
+    .card1::after {
+        left: 20px;
+        right: 20px;
+        bottom: 80px;
+    }
+    .cup {
+        margin-bottom: 25px;
+    }
+    .cartier {
+        margin: 25px 0 10px 0;
+    }
+    .description3 {
+        font-size: 20px;
+        max-width: 100%;
+        margin: 0 0 45px 0;
+    }
+    .Star6 {
+        left: 50%;
+        top: 37px;
+        width: 80px;
+        height: 80px;
+    }
+    .sixth_page {
+        width: 100%;
+        height: auto; 
+        margin: 60px auto 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .sixth_page h2 {
+        margin-bottom: 35px;
+    }
+    .six {
+        width: 100%;
+        font-size: 26px;
+        text-align: center;
+    }
+    .six1 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .man {
+        width: 100%; 
+        height: 320px;
+    }
+    .quote {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+    .quotes, .quotes2 {
+        margin: 10px auto;
+    }
+    .quote1 {
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .inf {
+        margin: 20px 0;
+    }
+    .slider-navigation {
+        margin-top: 10px;
+    }
+    .Star7 {
+        left: 30px;
+        top: -7px;
+        width: 80px;
+        height: 80px;
+    }
+    .page_seven {
+        width: 100%;
+        height: auto; 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px; 
+        margin: 60px auto;
+    }
+    .seven {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .seven1 {
+        width: 100%;
+        font-size: 32px;
+        text-align: center;
+    }
+    .seven-right-col {
+        max-width: 100%;
+        align-items: center; 
+    }
+    .text3 {
+        font-size: 15px;
+        text-align: center;
+    }
+    .page_seven .started {
+        margin: 15px 0 0 0;
+    }
+    .Star8 {
+        display: none; 
+    }
+    .page_eight {
+        width: 100%;
+        margin: 60px auto 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .title {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        text-align: center;
+    }
+    .eight {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+    }
+    .cards1 {
+        flex-direction: column; 
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .card2 {
+        width: 100%;
+        padding: 0 0 20px 0;
+    }
+    .photo1 {
+        height: 220px;
+    }
+    .text3 {
+        padding: 20px 15px 0 15px;
+    }
+    .text4 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .Star9 {
+        left: 65px;
+        top: -2px;
+        width: 80px;
+        height: 80px;
+    }
+    footer {
+        padding-top: 3.75rem;
+    }
+    .footer-container {
+        padding: 0 0.9375rem;
+    }
+    .footer-top {
+        flex-direction: column; 
+        gap: 2.5rem;
+        padding-bottom: 3.75rem;
+        text-align: center;
+    }
+    .footer-links-row {
+        flex-direction: column; 
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 1.875rem;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .footer-bottom-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 }
